@@ -1,0 +1,10 @@
+[package]
+name = "sandbox"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+nix = { version = "0.29.0", features = ["process"] }
+clap = { version = "4.5.31", features = ["derive"] }
+toml = "0.8.20"
+serde = {version = "1.0.219", features = ["derive"]}
