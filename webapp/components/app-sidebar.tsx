@@ -33,123 +33,115 @@ const data = {
     email: "m@example.com",
     avatar: "/avatars/shadcn.jpg",
   },
-  teams: [
+  courses: [
     {
-      name: "Acme Inc",
+      name: "C语言程序设计",
       logo: GalleryVerticalEnd,
-      plan: "Enterprise",
+      plan: "CPL",
     },
     {
-      name: "Acme Corp.",
+      name: "软件工程与计算1",
       logo: AudioWaveform,
-      plan: "Startup",
+      plan: "SE1",
     },
     {
-      name: "Evil Corp.",
+      name: "数据结构与算法",
       logo: Command,
-      plan: "Free",
+      plan: "DSA",
     },
   ],
-  navMain: [
+  assignments: [
     {
-      title: "Playground",
+      title: "作业一",
       url: "#",
       icon: SquareTerminal,
       isActive: true,
       items: [
         {
-          title: "History",
+          title: "题目一",
           url: "#",
         },
         {
-          title: "Starred",
+          title: "题目二",
           url: "#",
         },
         {
-          title: "Settings",
+          title: "题目三",
           url: "#",
         },
       ],
     },
     {
-      title: "Models",
+      title: "作业二",
       url: "#",
       icon: Bot,
       items: [
         {
-          title: "Genesis",
+          title: "题目一",
           url: "#",
         },
         {
-          title: "Explorer",
+          title: "题目二",
           url: "#",
         },
         {
-          title: "Quantum",
+          title: "题目三",
           url: "#",
         },
       ],
     },
     {
-      title: "Documentation",
+      title: "作业三",
       url: "#",
       icon: BookOpen,
       items: [
         {
-          title: "Introduction",
+          title: "题目一",
           url: "#",
         },
         {
-          title: "Get Started",
+          title: "题目二",
           url: "#",
         },
         {
-          title: "Tutorials",
-          url: "#",
-        },
-        {
-          title: "Changelog",
+          title: "题目三",
           url: "#",
         },
       ],
     },
     {
-      title: "Settings",
+      title: "作业四",
       url: "#",
       icon: Settings2,
       items: [
         {
-          title: "General",
+          title: "题目一",
           url: "#",
         },
         {
-          title: "Team",
+          title: "题目二",
           url: "#",
         },
         {
-          title: "Billing",
-          url: "#",
-        },
-        {
-          title: "Limits",
+          title: "题目三",
           url: "#",
         },
       ],
     },
   ],
-  projects: [
+  exams: [
     {
-      name: "Design Engineering",
+      name: "考试一",
       url: "#",
       icon: Frame,
     },
     {
-      name: "Sales & Marketing",
+      name: "考试二",
       url: "#",
       icon: PieChart,
     },
     {
-      name: "Travel",
+      name: "考试三",
       url: "#",
       icon: Map,
     },
@@ -160,11 +152,11 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar collapsible="icon" {...props}>
       <SidebarHeader>
-        <TeamSwitcher teams={data.teams} />
+        <TeamSwitcher teams={data.courses} />
       </SidebarHeader>
       <SidebarContent>
-        <NavMain items={data.navMain} />
-        <NavProjects projects={data.projects} />
+        <NavMain items={data.assignments} />
+        <NavProjects projects={data.exams} />
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={data.user} />
